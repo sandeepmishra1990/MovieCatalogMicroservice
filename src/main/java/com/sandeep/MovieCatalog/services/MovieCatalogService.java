@@ -28,7 +28,7 @@ public class MovieCatalogService {
 	 */
 	@HystrixCommand(fallbackMethod="getMovieInfoListFallback")
 	public MovieInfo getMovieInfoList(){
-		return restTemplate.getForObject("http://movieinfo-microservice.herokuapp.com/movieinfo/1234", MovieInfo.class);
+		return restTemplate.getForObject("http://movieinfo-microservice/movieinfo/1234", MovieInfo.class);
 	
 	}
 	
